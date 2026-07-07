@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CHAT_SYSTEM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container": "#171f33",
+                    "on-primary-fixed": "#002113",
+                    "surface-container-lowest": "#060e20",
+                    "secondary-fixed": "#d5e3fd",
+                    "surface-bright": "#31394d",
+                    "on-tertiary-fixed": "#002117",
+                    "error-container": "#93000a",
+                    "surface-container-high": "#222a3d",
+                    "outline": "#86948a",
+                    "on-surface-variant": "#bbcabf",
+                    "surface-variant": "#2d3449",
+                    "surface-tint": "#4edea3",
+                    "surface-container-low": "#131b2e",
+                    "on-primary-container": "#00422b",
+                    "on-error-container": "#ffdad6",
+                    "inverse-primary": "#006c49",
+                    "surface-dim": "#0b1326",
+                    "primary": "#4edea3",
+                    "on-tertiary": "#003829",
+                    "inverse-on-surface": "#283044",
+                    "secondary-container": "#3c4a5e",
+                    "primary-fixed": "#6ffbbe",
+                    "on-secondary-fixed-variant": "#3a485c",
+                    "surface": "#0b1326",
+                    "outline-variant": "#3c4a42",
+                    "tertiary-fixed-dim": "#95d3ba",
+                    "on-primary-fixed-variant": "#005236",
+                    "on-tertiary-fixed-variant": "#0b513d",
+                    "on-surface": "#dae2fd",
+                    "on-secondary-fixed": "#0d1c2f",
+                    "tertiary": "#95d3ba",
+                    "on-error": "#690005",
+                    "tertiary-container": "#71af97",
+                    "background": "#0b1326",
+                    "secondary-fixed-dim": "#b9c7e0",
+                    "secondary": "#b9c7e0",
+                    "on-background": "#dae2fd",
+                    "on-tertiary-container": "#004231",
+                    "tertiary-fixed": "#b0f0d6",
+                    "primary-container": "#10b981",
+                    "on-secondary": "#233144",
+                    "primary-fixed-dim": "#4edea3",
+                    "error": "#ffb4ab",
+                    "inverse-surface": "#dae2fd",
+                    "surface-container-highest": "#2d3449",
+                    "on-secondary-container": "#abb9d2",
+                    "on-primary": "#003824"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "1rem",
+                    "unit-8": "2rem",
+                    "unit-1": "0.25rem",
+                    "container-max": "1280px",
+                    "unit-4": "1rem",
+                    "unit-2": "0.5rem",
+                    "unit-6": "1.5rem",
+                    "base": "4px",
+                    "gutter": "1.5rem",
+                    "margin-desktop": "2rem",
+                    "unit-12": "3rem"
+            },
+            "fontFamily": {
+                    "label-md": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "body-md": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "headline-xl": ["Inter"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "300"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "label-sm": ["11px", {"lineHeight": "16px", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-xl": ["42px", {"lineHeight": "48px", "letterSpacing": "0.4em", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+    <link rel="stylesheet" href="../css/welcome.css">
+</head>
+<body class="bg-[#060e20] text-on-surface min-h-screen flex items-center justify-center relative p-6 antialiased">
+    
+    <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+        <div class="absolute inset-0 stage-effect"></div>
+        <div class="absolute inset-0 grid-bg-elite"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] bg-primary/10 rounded-full blur-[200px] elite-pulse"></div>
+        <div class="absolute -top-[15%] -right-[10%] w-[60%] h-[60%] bg-primary/8 rounded-full blur-[180px] animate-pulse"></div>
+        <div class="absolute -bottom-[20%] -left-[10%] w-[70%] h-[70%] bg-tertiary/10 rounded-full blur-[200px] animate-float"></div>
+    </div>
+
+    <main class="relative z-10 w-full max-w-lg">
+        <div class="text-center mb-16 space-y-6">
+            <h1 class="font-headline-xl text-headline-xl brand-glow bg-gradient-to-br from-primary via-on-surface to-primary-fixed bg-clip-text text-transparent select-none">CHAT_SYSTEM</h1>
+            <p class="font-body-sm text-on-surface/40 uppercase tracking-[0.4em] text-[10px] font-bold">Synchronized Communication Architecture</p>
+        </div>
+        <div class="glass-panel rounded-[3rem] p-10 md:p-14 auth-transition">
+
+        <div class="flex p-1.5 bg-black/50 rounded-[1.5rem] mb-12 border border-white/5 shadow-2xl">
+            <button class="flex-1 py-4 font-label-md text-label-md tracking-[0.2em] transition-all duration-700 rounded-[1.25rem] text-primary bg-primary/15 border border-primary/25 shadow-[0_0_25px_rgba(78,222,163,0.2)]" id="toggle-signin" onclick="switchAuth('signin')">LOGIN</button>
+            <button class="flex-1 py-4 font-label-md text-label-md tracking-[0.2em] transition-all duration-700 rounded-[1.25rem] text-on-surface/30 hover:text-on-surface" id="toggle-signup" onclick="switchAuth('signup')">REGISTER</button>
+        </div>
+</body>
+<script src="../js/welcome.js"></script>
+</html>

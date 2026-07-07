@@ -45,7 +45,7 @@ function authMiddleware(req, res, next) {
 // ============= ENDPOINTS =============
 // BIENVENIDA
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/public/html/index.html');
+  res.sendFile(__dirname + '/public/html/Welcome.html');
 });
 
 // CONEXION A LA BASE DE DATOS
